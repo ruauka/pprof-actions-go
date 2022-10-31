@@ -73,7 +73,7 @@ jobs:
 
           script: |
             whoami
-            docker push ruauka/actions:tagname
+#            docker push ruauka/actions:tagname
 
 #            # Login into Digital Ocean Registry
 #            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} $(echo $REGISTRY)
