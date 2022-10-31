@@ -73,7 +73,7 @@ jobs:
             # Login into Digital Ocean Registry
             docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
             
-            docker push ruauka/actions:tagname
+            docker pull ruauka/actions
 
 #            # Login into Digital Ocean Registry
 #            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} $(echo $REGISTRY)
