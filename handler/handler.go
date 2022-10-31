@@ -8,13 +8,11 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-// Request - input message struct.
 type Request struct {
 	NumberOne int `json:"number_one"`
 	NumberTwo int `json:"number_two"`
 }
 
-// HealthCheck - check health.
 func HealthCheck(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
