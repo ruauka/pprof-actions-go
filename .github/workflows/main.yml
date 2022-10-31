@@ -9,34 +9,34 @@ on:
       - master
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout master
-        uses: actions/checkout@v3
-
-      - name: Set up Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.17.7
-
-      - name: Run Tests
-        run: go test ./...
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout master
-        uses: actions/checkout@v3
-
-      - name: Run Lints
-        uses: golangci/golangci-lint-action@v3
-        with:
-          version: v1.49
+#  test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout master
+#        uses: actions/checkout@v3
+#
+#      - name: Set up Go
+#        uses: actions/setup-go@v3
+#        with:
+#          go-version: 1.17.7
+#
+#      - name: Run Tests
+#        run: go test ./...
+#
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout master
+#        uses: actions/checkout@v3
+#
+#      - name: Run Lints
+#        uses: golangci/golangci-lint-action@v3
+#        with:
+#          version: v1.49
 
   build_and_push:
     runs-on: ubuntu-latest
-    needs: test
+#    needs: test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -53,5 +53,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: $(echo $REGISTRY)/$(echo $IMAGE_NAME)/$(echo $GITHUB_SHA | head -c7):latest
+          tags: $(echo $IMAGE_NAME)/$(echo $GITHUB_SHA | head -c7):latest
 #          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
