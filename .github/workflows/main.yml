@@ -72,7 +72,7 @@ jobs:
 #          port: ${{ secrets.PORT }}
 
           script: |
-            script: whoami
+            whoami
             docker push ruauka/actions:tagname
 
 #            # Login into Digital Ocean Registry
