@@ -53,5 +53,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: $(echo $IMAGE_NAME)/$(echo $GITHUB_SHA | head -c7)
+          tags: $(echo $IMAGE_NAME)/$(echo $GITHUB_SHA | head -c7)/aaa:latest
 #          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/aaa:latest
