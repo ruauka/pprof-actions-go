@@ -21,7 +21,7 @@ func HealthCheck(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	json.NewEncoder(w).Encode(map[string]string{"status": "ok"}) //nolint:errcheck,gosec
 }
 
-// Add - add two numbers.
+// Add - add two numbers
 func Add(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	// Парсинг входящего JSON
 	req := &Request{}
