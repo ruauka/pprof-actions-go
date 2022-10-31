@@ -37,7 +37,9 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-    needs: test, lint
+    needs:
+      - test
+      - lint
     steps:
       - name: Checkout
         uses: actions/checkout@v3
