@@ -73,7 +73,15 @@ jobs:
             # Login into Digital Ocean Registry
             docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
             
+            # Stop running container
+            docker stop ruauka/actions
+            
+             # Remove old container
+            docker rm ruauka/actions
+            
             docker pull ruauka/actions
+            
+            docker run -d --name ruauka/actions -p 5672:5672
 
 #            # Login into Digital Ocean Registry
 #            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} $(echo $REGISTRY)
