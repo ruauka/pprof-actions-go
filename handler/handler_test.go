@@ -44,7 +44,7 @@ func TestAdd(t *testing.T) {
 				"number_one": 10,
 				"number_two": 5,
 			}`),
-			expectedCode: http.StatusBadRequest,
+			expectedCode: http.StatusOK,
 			testName:     "test_2_err decode",
 		},
 	}
