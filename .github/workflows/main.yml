@@ -73,6 +73,7 @@ jobs:
 
           script: |
             whoami
+            git clone https://github.com/ruauka/for_actions.git
 #            docker push ruauka/actions:tagname
 
 #            # Login into Digital Ocean Registry
