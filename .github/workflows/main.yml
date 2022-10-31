@@ -24,4 +24,4 @@ jobs:
         run: go test ./...
 
       - name: Lint
-        run: golangci-lint run
+        run: golangci-lint run .
