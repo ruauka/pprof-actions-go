@@ -8,7 +8,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-// Request - input messag struct.
+// Request - input message struct.
 type Request struct {
 	NumberOne int `json:"number_one"`
 	NumberTwo int `json:"number_two"`
