@@ -74,14 +74,14 @@ jobs:
             docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
             
             # Stop running container
-            docker stop ruauka/actions
+            docker stop my-actions
             
              # Remove old container
-            docker rm ruauka/actions
+            docker rm my-actions
             
             docker pull ruauka/actions
             
-            docker run -d --restart always --publish 8000:8000 --name ruauka/actions
+            docker run -d --name my-actions -p 8000:8000 ruauka/actions
             
             
 
