@@ -81,7 +81,9 @@ jobs:
             
             docker pull ruauka/actions
             
-            docker run -d --name ruauka/actions -p 5672:5672
+            docker run -d --restart always --publish 8000:8000 --name ruauka/actions
+            
+            
 
 #            # Login into Digital Ocean Registry
 #            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} $(echo $REGISTRY)
