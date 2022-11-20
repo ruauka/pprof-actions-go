@@ -79,7 +79,7 @@ jobs:
             # Remove current image
             docker rmi ruauka/actions
 
-            # Pull new container from DockerHub
+            # Pull new image from DockerHub
             docker pull ruauka/actions
 
             # Run new container
