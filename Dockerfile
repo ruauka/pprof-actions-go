@@ -5,5 +5,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o build/compiled ./main.go
 
 FROM alpine:latest
 WORKDIR /app
-COPY --from=builder ./app .
-CMD ["build/compiled"]
+COPY --from=builder ./app/build .
+CMD ["./compiled"]
