@@ -73,14 +73,11 @@ jobs:
             # Login into DockerHub
             docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-            # Stop and remove current container
-            docker stop my-actions && docker rm my-actions
+            # Stop current container
+            docker stop my-actions
 
             # Remove current image
             docker rmi ruauka/actions
 
-            # Pull new image from DockerHub
-            docker pull ruauka/actions
-
             # Run new container
-            docker run -d --name my-actions -p 8000:8000 ruauka/actions
+            docker run -d --rm --name my-actions -p 8080:8000 ruauka/actions
