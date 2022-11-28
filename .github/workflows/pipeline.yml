@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+#  pull_request:
+#    branches:
+#      - master
 
 jobs:
   test:
@@ -36,7 +36,7 @@ jobs:
 
   build_push:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+#    if: github.event_name == 'push'
     needs:
       - test
       - lint
@@ -60,7 +60,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+#    if: github.event_name == 'push'
     needs: build_push
     steps:
       - name: SSH connect
