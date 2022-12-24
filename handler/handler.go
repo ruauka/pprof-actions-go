@@ -18,7 +18,7 @@ type Request struct {
 func HealthCheck(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(map[string]string{"status": "ok!"}) //nolint:errcheck,gosec
+	json.NewEncoder(w).Encode(map[string]string{"status": "ok!!"}) //nolint:errcheck,gosec
 }
 
 // Add - add two numbers.
