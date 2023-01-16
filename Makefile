@@ -23,4 +23,4 @@ run:
 	docker run -d --rm --name actions -p 8080:8000 actions:latest
 
 remove:
-	docker stop actions && docker rm -f actions && docker rmi actions:latest
+	docker stop actions && docker rmi actions:latest
