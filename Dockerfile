@@ -3,8 +3,8 @@ WORKDIR /app
 COPY go.mod .
 COPY go.sum .
 COPY . .
-ARG CGO_ENABLED=0
-ARG GOOS=linux
+ENV CGO_ENABLED=0
+ENV GOOS=linux
 RUN go build -o build/main ./main.go
 
 FROM alpine:latest
