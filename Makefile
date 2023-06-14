@@ -10,11 +10,17 @@ lint:
 vendor:
 	go mod vendor
 
-dockerup:
-	docker-compose up -d --build
+bench:
+	go test -bench=BenchmarkExecute -benchmem -benchtime 5s -count=5
 
-dockerstop:
-	docker-compose stop
+pprof:
+	go test -bench=BenchmarkExecute -benchmem -benchtime=5s -count=5 -cpuprofile cpu.out -memprofile mem.out
+
+pprof-mem:
+	go tool pprof -http :9000 mem.out
+
+pprof-cpu:
+	go tool pprof -http :9000 cpu.out
 
 build:
 	docker build --tag=actions:latest .
