@@ -21,7 +21,7 @@ make remove
 
 ## Work
 
-To check alive of service make GET request on http://localhost:8080/health. If service are alive you get JSON:
+To check alive of service make GET request on http://localhost:8080/health. If service is alive you get JSON:
 
 ```bash
 {
