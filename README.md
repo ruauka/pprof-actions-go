@@ -21,6 +21,14 @@ make remove
 
 ## Work
 
+To check alive of service make GET request on http://localhost:8080/health. If service are alive you get JSON:
+
+```bash
+{
+    "status": "ok"
+}
+```
+
 To get calculation send a POST request to http://localhost:8080/execute.
 The example of request JSON is in directory:
 
@@ -61,7 +69,7 @@ Example result:
 
 ## DevOps
 Service has 2 deploy options:
-1. GitHub-Actions: folder `.github`.
+1. GitHub-Actions(default option for project): folder `.github`.
     Stages are:
     - Testing
     - Linting
