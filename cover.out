@@ -1,16 +1,17 @@
 mode: set
-pprof-actions-go/internal/utils/functions/function.go:11.43,14.2 2 1
-pprof-actions-go/main.go:19.75,22.61 2 0
-pprof-actions-go/main.go:27.2,27.52 1 0
-pprof-actions-go/main.go:32.2,41.33 7 0
-pprof-actions-go/main.go:22.61,25.3 2 0
-pprof-actions-go/main.go:27.52,30.3 2 0
-pprof-actions-go/main.go:44.13,53.2 5 0
-pprof-actions-go/internal/response/response.go:24.46,34.2 1 1
+pprof-actions-go/main.go:20.75,23.61 2 0
+pprof-actions-go/main.go:28.2,28.52 1 0
+pprof-actions-go/main.go:33.2,42.33 7 0
+pprof-actions-go/main.go:23.61,26.3 2 0
+pprof-actions-go/main.go:28.52,31.3 2 0
+pprof-actions-go/main.go:46.74,50.2 3 0
+pprof-actions-go/main.go:52.13,63.2 6 0
 pprof-actions-go/internal/request/request.go:33.50,35.16 2 1
 pprof-actions-go/internal/request/request.go:40.2,40.12 1 1
 pprof-actions-go/internal/request/request.go:35.16,36.56 1 1
 pprof-actions-go/internal/request/request.go:36.56,38.4 1 1
+pprof-actions-go/internal/utils/functions/function.go:11.43,14.2 2 1
+pprof-actions-go/internal/response/response.go:24.46,34.2 1 1
 pprof-actions-go/internal/logic/data.go:19.51,24.2 1 1
 pprof-actions-go/internal/logic/data.go:27.29,32.2 4 0
 pprof-actions-go/internal/logic/data.go:35.30,40.2 4 0
