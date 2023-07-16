@@ -1,10 +1,19 @@
-## Project description
-
+![](https://img.shields.io/github/go-mod/go-version/ruauka/pprof-actions-go)
+[![Coverage Status](https://codecov.io/github/ruauka/pprof-actions-go/coverage.svg?branch=master)](https://codecov.io/gh/ruauka/pprof-actions-go)
+[![build](https://github.com/ruauka/pprof-actions-go/actions/workflows/pipeline.yml/badge.svg)](https://github.com/ruauka/pprof-actions-go/actions/workflows/pipeline.yml)
+## Overview
+Pet-project.
 Go service which calculates the loan overdue.
+
+
+## Content
+- [Start](#start)
+- [Pprof](#pprof)
+- [DevOps](#devops)
 
 ## Start
 
-To start the project run the command in terminal:
+To start project run command in terminal:
 
 ```bash
 make build
@@ -13,13 +22,11 @@ make build
 make run
 ```
 
-To stop, run the command:
+To stop, run command:
 
 ```bash
 make remove
 ```
-
-## Work
 
 To check alive of service make GET request on http://localhost:8080/health. If service is alive you get JSON:
 
@@ -36,7 +43,7 @@ The example of request JSON is in directory:
 testdata/input.json
 ```
 
-## Pprof 
+## Pprof
 
 Service has benchmarks and a pprof profiler.
 
