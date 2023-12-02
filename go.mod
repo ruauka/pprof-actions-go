@@ -1,6 +1,6 @@
 module pprof-actions-go
 
-go 1.17
+go 1.21
 
 require (
 	github.com/go-playground/validator/v10 v10.14.1

@@ -1,5 +1,5 @@
 test:
-	@go test -cover ./... -coverprofile cover.out
+	@go test ./... -coverpkg=./... -cover -coverprofile cover.out
 	@echo "-------------------------------------------------------------------------------------"
 	@go tool cover -func cover.out
 	@echo "-------------------------------------------------------------------------------------"
@@ -20,13 +20,16 @@ pprof-mem:
 	go tool pprof -http :9000 mem.out
 
 pprof-cpu:
-	go tool pprof -http :9000 cpu.out
+	go tool pprof -http :9010 cpu.out
 
 build:
-	docker build --tag=actions:latest .
+	docker build --tag=ruauka/actions:latest .
 
 run:
 	docker run -d --rm --name actions -p 8080:8000 actions:latest
 
 remove:
 	docker stop actions && docker rmi actions:latest
+
+push:
+	docker push ruauka/actions:latest

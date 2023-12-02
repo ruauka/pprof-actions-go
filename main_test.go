@@ -3,9 +3,9 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"testing"
 
 	"github.com/julienschmidt/httprouter"
@@ -26,7 +26,7 @@ func BenchmarkExecute(b *testing.B) {
 }
 
 func prepare() []byte {
-	data, err := ioutil.ReadFile("testdata/input.json")
+	data, err := os.ReadFile("testdata/input.json")
 	if err != nil {
 		fmt.Println(err)
 	}
